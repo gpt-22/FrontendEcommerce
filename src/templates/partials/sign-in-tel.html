@@ -1,0 +1,35 @@
+<!-- modal -->
+<div id="sign-in-tel-modal" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        
+        <!-- sign-in block -->
+        <div class="uk-flex uk-flex-center uk-flex-middle sign-in__container">
+            <div class="sign-in__block">
+                <form class="uk-flex uk-flex-column uk-flex-stretch">
+                    <h2>
+                        Вход по номеру телефона
+                    </h2>
+        
+                    <div class=" uk-margin-small">
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                            <input class="uk-input uk-form-large" type="tel" id="phoneInput" value="+7 " required placeholder="Номер телефона">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="uk-button uk-button-large uk-button-primary uk-margin-small">
+                        Получить код
+                    </button>
+        
+                    <a uk-toggle="target: #sign-in-email-modal" class="sign-in-link">
+                        Войти по почте
+                    </a>
+                </form>
+            </div>
+        </div>
+        <!-- /sign-in block -->
+
+    </div>
+</div>
+<!-- /modal -->

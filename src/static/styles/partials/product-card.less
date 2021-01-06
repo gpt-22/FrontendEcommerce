@@ -1,0 +1,35 @@
+// main:../style.less
+
+
+.product-card {
+    box-shadow: none;
+    
+    &:hover {
+        box-shadow: 0 5px 15px #ddd;
+    }
+
+    &__body {
+        padding: 10px 15px;
+        
+        .like-btn:hover {
+            color: rgb(255, 77, 77);
+        }
+    }
+
+    &__price {
+        color: #333;
+    }
+    .size {
+        display: inline-block;
+        min-width: 30px;
+        height: 30px;
+        text-align: center;
+        padding: 0.5em 0;
+        border: 1px solid @border;
+        transition: ease .3s;
+        
+        &:hover {
+            background-color: #eee; 
+        }
+    }
+}

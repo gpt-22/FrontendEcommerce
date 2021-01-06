@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+
+{% set title = "cart page" %}
+
+{% block content %}
+
+<div class="tm-cart-page">
+    <h3 class="tm-page-title tm-page-title__cart">
+        {{ pageTitles.cart }}
+    </h3>
+
+    <div class="uk-width-1-1 uk-flex uk-flex-column uk-flex-middle">
+        <div>
+            <ul class="tm-product-list">
+
+                <li id="product1" class="tm-product-list__item tm-product">
+                    <div class="tm-product__info-container">
+                        <div class="tm-product__img-container">
+                            <img class="tm-product__img" src="static/images/кроссовки-air-force_1.jpg" alt="">
+                        </div>
+                        <div class="tm-product__info">
+                            <h3 class="tm-product__title">
+                                Nike Air Force 1 Mid
+                            </h3>
+                            <span class="tm-product__color">
+                                Белый 
+                            </span>    
+                            <span class="tm-product__size">
+                                42 RUS
+                            </span>
+                            <p class="tm-product__price">
+                                7990 ₽
+                            </p>    
+                        </div>
+                    </div>
+    
+                    <div class="tm-product__quantity-column">
+                        <div class="uk-flex">
+                            <a uk-icon="icon: minus; ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-decrement-qty-btn"></a>
+                            <input class="uk-input uk-border-pill tm-product__quantity" type="text" maxlength="2" min="1" value="1">
+                            <a uk-icon="icon: plus;  ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-increment-qty-btn"></a>
+                        </div>
+                        <a class="uk-icon-button uk-button-danger tm-delete-btn" uk-icon="icon: trash;"></a>
+                    </div>
+                </li>
+
+                <li id="product2" class="tm-product-list__item tm-product">
+                    <div class="tm-product__info-container">
+                        <div class="tm-product__img-container">
+                            <img class="tm-product__img" src="static/images/кроссовки-air-force_1.jpg" alt="">
+                        </div>
+                        <div class="tm-product__info">
+                            <h3 class="tm-product__title">
+                                Nike Air Force 2 Mid
+                            </h3>
+                            <span class="tm-product__color">
+                                Белый 
+                            </span>    
+                            <span class="tm-product__size">
+                                42 RUS
+                            </span>
+                            <p class="tm-product__price">
+                                7990 ₽
+                            </p>    
+                        </div>
+                    </div>
+    
+                    <div class="tm-product__quantity-column">
+                        <div class="uk-flex">
+                            <a uk-icon="icon: minus; ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-decrement-qty-btn"></a>
+                            <input class="uk-input uk-border-pill tm-product__quantity" type="text" maxlength="2" min="1" value="1">
+                            <a uk-icon="icon: plus;  ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-increment-qty-btn"></a>
+                        </div>
+                        <a class="uk-icon-button uk-button-danger tm-delete-btn" uk-icon="icon: trash;"></a>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="uk-flex uk-flex-between uk-margin">
+                <h4 class="tm-total-price">
+                    Всего: <span>7990 ₽</span> 
+                </h4>
+                <a class="uk-button uk-button-primary uk-button-large uk-border-pill tm-checkout-btn" href="checkout.html">
+                    Оформить заказ
+                </a>    
+            </div>
+        </div>
+    </div>
+        
+</div>
+  
+{% endblock %}

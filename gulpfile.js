@@ -1,170 +1,135 @@
 
-let project_folder = require("path").basename(__dirname);
-let source_folder = "#src";
-
-let fs = require("fs");
-
-let path = {
-    build: {
-        html: project_folder + "/",
-        css: project_folder + "/css/",
-        js: project_folder + "/js/",
-        img: project_folder + "/img/",
-        fonts: project_folder + "/fonts/",
-    },
-    src: {
-        html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
-        css: source_folder + "/styles/style.less",
-        js: source_folder + "/js/script.js",
-        img: source_folder + "/img/**/*.{jpg,JPG,png,PNG,svg,SVG,gif,GIF,ico,ICO,webp,WEBP}",
-        fonts: source_folder + "/fonts/*.ttf",
-    },
-    watch: {
-        html: source_folder + "/**/*.html",
-        css: source_folder + "/styles/**/*.less",
-        js: source_folder + "/js/**/*.js",
-        img: source_folder + "/img/**/*.{jpg,JPG,png,PNG,svg,SVG,gif,GIF,ico,ICO,webp,WEBP}",
-    },
-    clean: "./" + project_folder + "/",
-}
-
-let { src, dest } = require("gulp"),
-    gulp = require("gulp"),
-    browsersync = require("browser-sync").create(),
-    fileinclude = require("gulp-file-include"),
-    del = require("del"),
-    less = require("gulp-less"),
-    autoprefixer = require("gulp-autoprefixer"),
-    group_media = require("gulp-group-css-media-queries"),
-    clean_css = require("gulp-clean-css"),
-    rename = require("gulp-rename"),
-    uglify = require("gulp-uglify-es").default,
-    imagemin = require("gulp-imagemin"),
-    webp = require("gulp-webp")
-    webphtml = require("gulp-webp-html"),
-    webpcss = require("gulp-webp-css"),
-    ttf2woff = require("gulp-ttf2woff"),
-    ttf2woff2 = require("gulp-ttf2woff2"),
-    fonter = require("gulp-fonter");
+// variables & consts 
+const
+    gulp = require('gulp') 
+    browserSync = require('browser-sync').create()
+    nunjucks = require('gulp-nunjucks-render')
+    less = require('gulp-less')
+    autoprefixer = require('gulp-autoprefixer')
+    cleanCSS = require('gulp-clean-css')
+    rename = require('gulp-rename')
+    
+const 
+    sourceFolder = 'src'
+    projectFolder = 'dist'
+    path = {
+        src: {
+            html: [sourceFolder + '/*/*.html'],
+            css: sourceFolder + '/static/styles/style.less',
+            js: sourceFolder + '/static/js/**/*.js',
+            img: sourceFolder + '/static/images/**/*.{jpg,JPG,png,PNG,svg,SVG,gif,GIF,ico,ICO,webp,WEBP}',
+            fonts: sourceFolder + '/static/fonts/*.ttf',
+        },
+        watch: {
+            html: sourceFolder + '/**/*.html',
+            css: sourceFolder + '/static/styles/**/*.less',
+            js: sourceFolder + '/static/js/**/*.js',
+            img: sourceFolder + '/static/images/**/*.{jpg,JPG,png,PNG,svg,SVG,gif,GIF,ico,ICO,webp,WEBP}',
+        },
+        build: {
+            html: projectFolder + '/',
+            css: projectFolder + '/static/styles/',
+            js: projectFolder + '/static/js/',
+            img: projectFolder + '/static/images/',
+            fonts: projectFolder + '/static/fonts/',
+        },
+        clean: './' + projectFolder + '/',
+    }
 
 
-function browserSync(params) {
-    browsersync.init({
-        server: {
-            baseDir: "./" + project_folder + "/"
+// live reload
+function runBrowserSync(params) {
+    browserSync.init({
+        server: { 
+            baseDir: './' + projectFolder + '/',
+            index: 'templates/catalog.html',
+            routes: {
+                "/": "./dist/templates/"
+            }
         },
         port: 3000,
-        notify: false
+        open: false,
+        notify: false,
     })
 }
 
-function html() {
-    return src(path.src.html)
-        .pipe(fileinclude())
-        .pipe(webphtml())
-        .pipe(dest(path.build.html))
-        .pipe(browsersync.stream())
+// watch tasks
+function watchHTML() {
+    return gulp.src(path.src.html)
+    .pipe(nunjucks({
+        path: './' + sourceFolder + '/',
+        data: {
+            pageTitles: {
+                men: "Мужчины",
+                menClothes: "Мужская одежда",
+                menShoes: "Мужская обувь",
+                women: "Женщины",
+                womenClothes: "Женская одежда",
+                womenShoes: "Женская обувь",
+                cart: "Корзина",
+                checkout: "Оформление заказа",
+            }    
+        }
+    }))
+    .pipe(gulp.dest(path.build.html))
+    .pipe(browserSync.stream())
 }
 
-function css() {
-    return src(path.src.css)
-        .pipe(
-            less({})
-        )
-        .pipe(
-            group_media()
-        )
-        .pipe(
-            autoprefixer({
-                overrideBrowserlist: ["last 5 versions"],
-                cascade: true
-            })
-        )
-        .pipe(webpcss())
-        .pipe(dest(path.build.css))
-        .pipe(clean_css())
-        .pipe(
-            rename({
-                extname: ".min.css"
-            })
-        )
-        .pipe(dest(path.build.css))
-        .pipe(browsersync.stream())
-}
-
-function js() {
-    return src(path.src.js)
-        .pipe(fileinclude())
-        .pipe(dest(path.build.js))
-        .pipe(uglify())
-        .pipe(
-            rename({
-                extname: ".min.js"
-            })
-        )
-        .pipe(dest(path.build.js))
-        .pipe(browsersync.stream())
-}
-
-function images() {
-    return src(path.src.img)
-        .pipe(
-            webp({
-                quality: 70
-            })
-        )
-        .pipe(dest(path.build.img))
-        .pipe(src(path.src.img))
-        .pipe(
-            imagemin({
-                progressive: true,
-                svgoPlugins: [{ removeViewBox: false }],
-                interlaced: true,
-                optimizationLevel: 3 // 0 to 7
-            })
-        )
-        .pipe(dest(path.build.img))
-        .pipe(browsersync.stream())
-}
-
-function fonts() {
-    src(path.src.fonts)
-        .pipe(ttf2woff())
-        .pipe(dest(path.build.fonts));
-    return src(path.src.fonts)
-        .pipe(ttf2woff2())
-        .pipe(dest(path.build.fonts))
-}
-
-gulp.task("otf2ttf", function() {
-    return src([source_folder + "/fonts/*.otf"])
-        .pipe(fonter({
-            formats: ["ttf"]
+function watchCSS() {
+    return gulp.src(path.src.css)
+    .pipe(less())
+    .pipe(autoprefixer({
+            overrideBrowserlist: ['last 5 versions'],
+            cascade: true
         }))
-        .pipe(dest(source_folder + "/fonts/"));
-})
+    .pipe(gulp.dest(path.build.css))
+    .pipe(cleanCSS()) // minification
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest(path.build.css))
+    .pipe(browserSync.stream())
+}
+
+function watchJS() {
+    return gulp.src(path.src.js)
+    .pipe(gulp.dest(path.build.js))
+    .pipe(browserSync.stream())
+}
+
+function watchImages() {
+    return gulp.src(path.src.img)
+    .pipe(gulp.dest(path.build.img))
+    .pipe(browserSync.stream())
+}
 
 function watchFiles(params) {
-    gulp.watch([path.watch.html], html);
-    gulp.watch([path.watch.css], css);
-    gulp.watch([path.watch.js], js);
-    gulp.watch([path.watch.img], images);
+    gulp.watch([path.watch.html], watchHTML)
+    gulp.watch([path.watch.css], watchCSS)
+    gulp.watch([path.watch.js], watchJS)
+    gulp.watch([path.watch.img], watchImages)
 }
 
+
+function fonts() {
+    return gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
+}
+
+
+// delete result folder to rewrite
+const del = require('del')
 function clean(params) {
-    return del(path.clean);
+    return del(path.clean)
 }
 
 
-let build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
-let watch = gulp.parallel(build, watchFiles, browserSync);
+// run
+exports.html = watchHTML
+exports.css = watchCSS
+exports.js = watchJS
+exports.images = watchImages
 
-exports.images = images;
-exports.fonts = fonts;
-exports.html = html;
-exports.css = css;
-exports.js = js;
-exports.uglify = uglify;
-exports.build = build;
-exports.watch = watch;
-exports.default = watch;
+const build = gulp.series(clean, gulp.parallel(watchHTML, watchCSS, watchJS, watchImages, fonts))
+const watch = gulp.parallel(build, watchFiles, runBrowserSync)
+exports.build = build
+exports.watch = watch
+
+exports.default = watch

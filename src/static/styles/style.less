@@ -1,0 +1,49 @@
+// Zeroing CSS
+@import "zerocss.less";
+
+
+// Fonts
+
+
+// Vars
+@import "vars";
+
+
+// Mixins
+@import "mixins";
+
+
+// Custom styles
+body a {
+    color: black;
+}
+.container {}
+.content {
+    min-height: calc(100vh - @footer-height);
+    padding: 0 20px;
+}
+
+// header
+@import "common/header";
+
+
+// partials
+@import "partials/sign-in";
+@import "partials/product-card";
+
+
+// pages
+
+.tm-page-title {
+    text-align: center;
+    margin: 30px;
+}
+
+@import "pages/catalog";
+@import "pages/product";
+@import "pages/cart";
+@import "pages/checkout";
+
+
+// footer
+@import "common/footer";

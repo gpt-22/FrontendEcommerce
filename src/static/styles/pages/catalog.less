@@ -1,0 +1,135 @@
+// main: ../style.less
+
+.tm-page-title__catalog {}
+
+.catalog-nav {
+    border-top: 1px solid @border;
+}
+
+.filters-nav {
+    margin: 0 0 0 20px;
+}
+
+#clear-filters-btn {
+    display: none;
+}
+
+.filters {
+    display: none;
+    border-top: 1px solid @border;
+    border-bottom: 1px solid @border;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 10px 0 0 0;
+        
+        .filter {
+            margin: 0 20px 20px 0;
+
+            &__item {}
+            &__title {}
+            &__list {
+                display: grid;
+                grid-gap: 2px;
+                color: #000;
+
+                > li {
+                    display: inline-block;
+                    padding: .5em 5px;
+                    height: 30px;
+                    border: 1px solid @border;
+                }
+                > li:hover {
+                    color: #1e87f0;
+                    cursor: pointer;
+                }
+            }
+        }
+        .filter:first-child {
+            margin-left: 0px;
+        }
+
+        .active {
+            background-color: #333;
+            color: #fff;
+            border: 2px solid black !important;
+        }
+        .unavailable {
+            background-color: #eee;
+        }
+
+        .prices {
+            grid-template-columns: repeat(3, 100px);
+            
+            > li {
+                text-align: right;
+            }
+        }
+        .sizes {
+            grid-template-columns: repeat(7, 30px);
+            
+            > li {
+                width: 100%;
+                text-align: center;
+                padding: 0.5em 0;
+            }
+        }
+        .size {}
+        .colors {
+            grid-template-columns: repeat(7, 30px);
+        }
+        .color {}
+        .colors>li:nth-child(1)  { background-color: #000; }
+        .colors>li:nth-child(2)  { background-color: #fff; }
+        .colors>li:nth-child(3)  { background-color: #ddd; }
+        .colors>li:nth-child(4)  { background-color: rgb(206, 0, 0); }
+        .colors>li:nth-child(5)  { background-color: yellow; }
+        .colors>li:nth-child(6)  { background-color: green; }
+        .colors>li:nth-child(7)  { background-color: aqua; }
+        .colors>li:nth-child(8)  { background-color: pink; }
+        .colors>li:nth-child(9)  { background-color: palegreen; }
+        .colors>li:nth-child(10) { background-color: blue; }
+        .colors>li:nth-child(11) { background-color: peru; }
+        .colors>li:nth-child(12) { background-color: orange; }
+        .colors>li:nth-child(13) { background-color: orangered; }
+        .brends {
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: 30px;
+        }
+        .brend {}
+        .seasons {
+            grid-template-columns: repeat(3, 100px);
+        }
+        .season {}
+    }
+}
+
+.sort {
+    width: 280px;
+
+    &__label {
+        font-size: 15px;
+    }
+    &__select-container {}
+    &__select {
+        line-height: 20px;
+    }
+}
+
+.products-grid {
+    padding: 20px 0;
+}
+
+
+@media (max-width: 349px) {
+    #show-filters-btn {
+        padding: 0 18px;
+    }
+
+    .filters__list {
+        .prices, .brends, .seasons {
+            grid-template-columns: repeat(2, 120px);
+        }
+    } 
+}

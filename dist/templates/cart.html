@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- adaptive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- disable forced link for a phone number on iOS -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <title></title>
+    
+   <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.3/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.3/dist/js/uikit-icons.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/styles/style.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <header class="header" uk-sticky>
+    <div class="uk-flex uk-flex-between uk-flex-middle header__body">
+
+        <a class="logo" href="catalog.html">
+            <img class="logo__img" src="static/images/logo.svg" alt="no logo image">
+        </a>
+        
+        
+        <nav class="catalog-menu" uk-navbar>
+            <a class="burger" href="#off-canvas-menu" uk-toggle>
+                <span class="burger-mid">
+                </span>   
+            </a>
+            <!-- Off-canvas -->
+            <div id="off-canvas-menu" uk-offcanvas>
+                <div class="uk-offcanvas-bar off-canvas-menu__bar">
+                    <button class="uk-offcanvas-close" type="button" uk-close></button> 
+                    <ul class="uk-margin-medium-top uk-nav-default uk-nav-parent-icon off-canvas-menu__list" uk-nav>
+                        <li class="uk-parent">
+                            <a href="#">Распродажа</a>
+                            <ul class="off-canvas-menu__sub-list uk-nav-sub uk-nav-parent-icon" uk-nav>
+                                <li class="uk-parent">
+                                    <a href="#">Одежда</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Обувь</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Вид спорта</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Аксессуары и снаряжение</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Мужчины</a>
+                            <ul class="off-canvas-menu__sub-list uk-nav-sub uk-nav-parent-icon" uk-nav>
+                                <li class="uk-parent">
+                                    <a href="#">Одежда</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Обувь</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Вид спорта</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Аксессуары и снаряжение</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Женщины</a>
+                            <ul class="off-canvas-menu__sub-list uk-nav-sub uk-nav-parent-icon" uk-nav>
+                                <li class="uk-parent">
+                                    <a href="#">Одежда</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Обувь</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Вид спорта</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Аксессуары и снаряжение</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Дети</a>
+                            <ul class="off-canvas-menu__sub-list uk-nav-sub uk-nav-parent-icon" uk-nav>
+                                <li class="uk-parent">
+                                    <a href="#">Одежда</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Обувь</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Вид спорта</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Аксессуары и снаряжение</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="uk-parent">
+                            <a href="#">Новинки</a>
+                            <ul class="off-canvas-menu__sub-list uk-nav-sub uk-nav-parent-icon" uk-nav>
+                                <li class="uk-parent">
+                                    <a href="#">Одежда</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Обувь</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Вид спорта</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li>
+                                <li class="uk-parent">
+                                    <a href="#">Аксессуары и снаряжение</a>
+                                    <ul class="uk-nav-sub">
+                                        <li><a href="http://">Вся одежда</a></li>
+                                        <li><a href="http://">Вся одежда из распродажи</a></li>
+                                        <li><a href="http://">Худи и толстовки</a></li>
+                                        <li><a href="http://">Футболки</a></li>
+                                        <li><a href="http://">Брюки и штаны</a></li>
+                                        <li><a href="http://">Спортивные костюмы</a></li>
+                                        <li><a href="http://">Комплекты</a></li>
+                                        <li><a href="http://">Шорты</a></li>
+                                        <li><a href="http://">Компрессионное белье</a></li>
+                                        <li><a href="http://">Унисекс</a></li>
+                                    </ul>
+                                </li> 
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+           <!-- Off-canvas/ -->
+
+           <ul class="uk-margin-remove uk-flex uk-navbar-nav catalog-menu__list">
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">
+                        Мужчины
+                    </a>
+                    <div class="sub-catalog-menu uk-navbar-dropdown" uk-dropdown="pos: bottom-center; offset: 0; animation: uk-animation-slide-top-small; duration: 300;">
+                        <div class="sub-catalog-menu__container uk-nav uk-navbar-dropdown-nav">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Одежда
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся одежда
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Худи и толстовки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футболки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Брюки и штаны
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивные костюмы
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Комплекты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шорты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Куртки и жилеты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Компрессионное белье
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Унисекс
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Обувь
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь из распродажи
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивный стиль
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Спорт
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Теннис
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Гольф
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Аксессуары и снаряжение
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Все аксессуары и снаряжение
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Рюкзаки и спортивные сумки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Перчатки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шейкеры
+                                    </a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                </li>
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">
+                        Женщины
+                    </a>
+                    <div class="sub-catalog-menu uk-navbar-dropdown" uk-dropdown="pos: bottom-center; offset: 0; animation: uk-animation-slide-top-small; duration: 300;">
+                        <div class="sub-catalog-menu__container uk-nav uk-navbar-dropdown-nav">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Одежда
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся одежда
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Худи и толстовки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футболки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Брюки и штаны
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивные костюмы
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Комплекты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шорты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Куртки и жилеты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Компрессионное белье
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Унисекс
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Обувь
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь из распродажи
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивный стиль
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Спорт
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Теннис
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Гольф
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Аксессуары и снаряжение
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Все аксессуары и снаряжение
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Рюкзаки и спортивные сумки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Перчатки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шейкеры
+                                    </a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                </li>
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">
+                        Дети
+                    </a>
+                    <div class="sub-catalog-menu uk-navbar-dropdown" uk-dropdown="pos: bottom-center; offset: 0; animation: uk-animation-slide-top-small; duration: 300;">
+                        <div class="sub-catalog-menu__container uk-nav uk-navbar-dropdown-nav">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Одежда
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся одежда
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Худи и толстовки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футболки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Брюки и штаны
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивные костюмы
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Комплекты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шорты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Куртки и жилеты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Компрессионное белье
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Унисекс
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Обувь
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь из распродажи
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивный стиль
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Спорт
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Теннис
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Гольф
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Аксессуары и снаряжение
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Все аксессуары и снаряжение
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Рюкзаки и спортивные сумки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Перчатки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шейкеры
+                                    </a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                </li>
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">
+                        Распродажа
+                    </a>
+                    <div class="sub-catalog-menu uk-navbar-dropdown" uk-dropdown="pos: bottom-center; offset: 0; animation: uk-animation-slide-top-small; duration: 300;">
+                        <div class="sub-catalog-menu__container uk-nav uk-navbar-dropdown-nav">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Одежда
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся одежда
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Худи и толстовки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футболки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Брюки и штаны
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивные костюмы
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Комплекты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шорты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Куртки и жилеты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Компрессионное белье
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Унисекс
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Обувь
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь из распродажи
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивный стиль
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Спорт
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Теннис
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Гольф
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Аксессуары и снаряжение
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Все аксессуары и снаряжение
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Рюкзаки и спортивные сумки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Перчатки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шейкеры
+                                    </a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                </li>
+                <li class="catalog-menu__item">
+                    <a class="catalog-menu__link" href="catalog.html">
+                        Новинки
+                    </a>
+                    <div class="sub-catalog-menu uk-navbar-dropdown" uk-dropdown="pos: bottom-center; offset: 0; animation: uk-animation-slide-top-small; duration: 300;">
+                        <div class="sub-catalog-menu__container uk-nav uk-navbar-dropdown-nav">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Одежда
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся одежда
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Худи и толстовки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футболки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Брюки и штаны
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивные костюмы
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Комплекты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шорты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Куртки и жилеты
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Компрессионное белье
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Унисекс
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Обувь
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Вся обувь из распродажи
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Спортивный стиль
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Спорт
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Бег
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Футбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Баскетбол
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Теннис
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Фитнес
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Гольф
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Скейтбординг
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-vertical uk-height-medium">
+                            <ul class="sub-catalog-menu__list">
+                                <h5>
+                                    Аксессуары и снаряжение
+                                </h5>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Все аксессуары и снаряжение
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Рюкзаки и спортивные сумки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Перчатки
+                                    </a>
+                                </li>
+                                <li class="sub-catalog-menu__item">
+                                    <a href="/" class="sub-catalog-menu__item">
+                                        Шейкеры
+                                    </a>
+                                </li>
+                            </ul>    
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+
+        <nav class="user-menu">
+            <ul class="uk-margin-remove uk-padding-remove uk-flex uk-flex-right user-menu__list">
+                <li class="user-menu__item">
+                    <input class="user-menu__search" type="search" placeholder="ПОИСК">
+                    <img class="user-menu__icon" src="static/images/search.svg" onclick="pushSearch()">
+                </li>
+                <li class="user-menu__item">
+                    <a uk-toggle="target: #sign-in-tel-modal">
+                        <img class="user-menu__icon" src="static/images/user.svg">
+                    </a>
+                    <!-- modal -->
+<div id="sign-in-tel-modal" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        
+        <!-- sign-in block -->
+        <div class="uk-flex uk-flex-center uk-flex-middle sign-in__container">
+            <div class="sign-in__block">
+                <form class="uk-flex uk-flex-column uk-flex-stretch">
+                    <h2>
+                        Вход по номеру телефона
+                    </h2>
+        
+                    <div class=" uk-margin-small">
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon" uk-icon="icon: receiver"></span>
+                            <input class="uk-input uk-form-large" type="tel" id="phoneInput" value="+7 " required placeholder="Номер телефона">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="uk-button uk-button-large uk-button-primary uk-margin-small">
+                        Получить код
+                    </button>
+        
+                    <a uk-toggle="target: #sign-in-email-modal" class="sign-in-link">
+                        Войти по почте
+                    </a>
+                </form>
+            </div>
+        </div>
+        <!-- /sign-in block -->
+
+    </div>
+</div>
+<!-- /modal -->
+
+                    <!-- modal -->
+<div id="sign-in-email-modal" uk-modal>
+    <div class="uk-modal-dialog uk-margin-auto-vertical">
+        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
+        
+        <!-- sign-in block -->
+        <div class="uk-flex uk-flex-center uk-flex-middle sign-in__container">
+            <div class="sign-in__block">
+                <form class="uk-flex uk-flex-column uk-flex-stretch">
+                    <h2>
+                        Вход по почте
+                    </h2>
+
+                    <div class=" uk-margin-small">
+                        <div class="uk-inline uk-width-1-1">
+                            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+                            <input class="uk-input uk-form-large" type="email" required placeholder="Электронная почта">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="uk-button uk-button-large uk-button-primary uk-margin-small">
+                        Получить код
+                    </button>
+
+                    <a uk-toggle="target: #sign-in-tel-modal" class="sign-in-link">
+                        Войти по телефону
+                    </a>
+                </form>
+            </div>
+        </div>
+        <!-- /sign-in block -->
+    </div>
+</div>
+<!-- /modal -->
+
+                </li>
+                <li class="user-menu__item">
+                    
+                    <a href="cart.html">
+                        <img class="user-menu__icon search-icon" src="static/images/cart.svg">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+        <main class="content">
+            
+
+<div class="tm-cart-page">
+    <h3 class="tm-page-title tm-page-title__cart">
+        Корзина
+    </h3>
+
+    <div class="uk-width-1-1 uk-flex uk-flex-column uk-flex-middle">
+        <div>
+            <ul class="tm-product-list">
+
+                <li id="product1" class="tm-product-list__item tm-product">
+                    <div class="tm-product__info-container">
+                        <div class="tm-product__img-container">
+                            <img class="tm-product__img" src="static/images/кроссовки-air-force_1.jpg" alt="">
+                        </div>
+                        <div class="tm-product__info">
+                            <h3 class="tm-product__title">
+                                Nike Air Force 1 Mid
+                            </h3>
+                            <span class="tm-product__color">
+                                Белый 
+                            </span>    
+                            <span class="tm-product__size">
+                                42 RUS
+                            </span>
+                            <p class="tm-product__price">
+                                7990 ₽
+                            </p>    
+                        </div>
+                    </div>
+    
+                    <div class="tm-product__quantity-column">
+                        <div class="uk-flex">
+                            <a uk-icon="icon: minus; ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-decrement-qty-btn"></a>
+                            <input class="uk-input uk-border-pill tm-product__quantity" type="text" maxlength="2" min="1" value="1">
+                            <a uk-icon="icon: plus;  ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-increment-qty-btn"></a>
+                        </div>
+                        <a class="uk-icon-button uk-button-danger tm-delete-btn" uk-icon="icon: trash;"></a>
+                    </div>
+                </li>
+
+                <li id="product2" class="tm-product-list__item tm-product">
+                    <div class="tm-product__info-container">
+                        <div class="tm-product__img-container">
+                            <img class="tm-product__img" src="static/images/кроссовки-air-force_1.jpg" alt="">
+                        </div>
+                        <div class="tm-product__info">
+                            <h3 class="tm-product__title">
+                                Nike Air Force 2 Mid
+                            </h3>
+                            <span class="tm-product__color">
+                                Белый 
+                            </span>    
+                            <span class="tm-product__size">
+                                42 RUS
+                            </span>
+                            <p class="tm-product__price">
+                                7990 ₽
+                            </p>    
+                        </div>
+                    </div>
+    
+                    <div class="tm-product__quantity-column">
+                        <div class="uk-flex">
+                            <a uk-icon="icon: minus; ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-decrement-qty-btn"></a>
+                            <input class="uk-input uk-border-pill tm-product__quantity" type="text" maxlength="2" min="1" value="1">
+                            <a uk-icon="icon: plus;  ratio: .75" class="uk-icon uk-icon-button tm-change-qty-btn tm-increment-qty-btn"></a>
+                        </div>
+                        <a class="uk-icon-button uk-button-danger tm-delete-btn" uk-icon="icon: trash;"></a>
+                    </div>
+                </li>
+
+            </ul>
+            <div class="uk-flex uk-flex-between uk-margin">
+                <h4 class="tm-total-price">
+                    Всего: <span>7990 ₽</span> 
+                </h4>
+                <a class="uk-button uk-button-primary uk-button-large uk-border-pill tm-checkout-btn" href="checkout.html">
+                    Оформить заказ
+                </a>    
+            </div>
+        </div>
+    </div>
+        
+</div>
+  
+
+        </main>
+
+        <footer class="footer uk-background-muted">
+    <div class="footer__body">
+        
+        <nav class="footer__item about">
+            <div class="about__body">
+                <h3 class="about__title title">
+                    О компании
+                </h3>
+                <ul class="support__list">
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            О нас
+                        </li>
+                    </a>
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Бренд
+                        </li>
+                    </a>
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Реквизиты
+                        </li>
+                    </a>
+                </ul>                
+            </div>
+        </nav>
+        
+        <nav class="footer__item support">
+            <div class="support__body">
+                <h3 class="support__title title">
+                    Поддержка
+                </h3>
+                <ul class="support__list">
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Возврата
+                        </li>
+                    </a>
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Доставка
+                        </li>
+                    </a>
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Контакты
+                        </li>
+                    </a>
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Условия использования
+                        </li>
+                    </a>
+                    <a class="uk-link-heading support__item link" href="">
+                        <li>
+                            Подарочные карты
+                        </li>
+                    </a>
+                </ul>                
+            </div>
+        </nav>
+
+        
+        <nav class="footer__item account">
+            <div class="account__body">
+                <h3 class="account__title title">
+                    Аккаунт
+                </h3>
+                <ul class="account__list">
+                    <a uk-toggle="target: #sign-in-email-modal" class="account__item link">
+                        <li>
+                            Войти по почте
+                        </li>
+                    </a>
+                    <a uk-toggle="target: #sign-in-tel-modal" class="account__item link">
+                        <li>
+                            Войти по телефону
+                        </li>
+                    </a>    
+                </ul>
+            </div>
+        </nav>
+
+
+        <div class="footer__item social-links">
+            <div class="social-links__body">
+                <span class="social-links__title title">
+                    Соц. сети
+                </span>
+                <div class="social-links__list">
+                   <a class="social-links__link" href="https://vk.com">
+                        <img class="social-links__icon" src="static/images/vk-reproductor.svg" alt="alt text">
+                   </a>
+                   <a class="social-links__link" href="https://instagram.com">
+                        <img class="social-links__icon" src="static/images/instagram.svg" alt="alt text">
+                   </a>
+                    <a class="social-links__link" href="https://facebook.com">
+                        <img class="social-links__icon" src="static/images/facebook.svg" alt="alt text">
+                    </a>  
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+    </div>
+    
+
+    <!-- custom JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>

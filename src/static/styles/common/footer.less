@@ -1,0 +1,135 @@
+// main: ../style.less
+
+
+.footer {
+    
+    min-height: @footer-height;
+    border-top: 1px solid @border;
+    
+    &__body {
+        max-width: 1600px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 50px 50px 100px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+    } 
+}
+
+.title {
+    margin: 0 0 14px 0;
+    color: rgb(60, 60, 60);
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.link, .link:visited {
+    height: 18px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    color: #555;
+}
+
+.about {
+    margin-bottom: 20px;
+    &__body {}
+    &__title {}
+}
+
+.support {
+    &__body {}
+    &__title {}
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    &__item {}
+}
+
+.account {
+    &__body {}
+    &__title {}
+    &__list {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    &__item {}
+}
+
+.social-links {
+    &__body {}
+    &__title {}
+    &__link {}
+    &__list {}
+
+    &__icon {
+        margin: 22px 5px 0;
+        width: 30px;
+        height: 30px;
+    }
+    &__icon:first-child {
+        margin-left: 0;
+    }
+}
+
+
+@media (max-width: @md) {
+    .footer {        
+        &__body {
+            grid-template-columns: repeat(4, 180px);
+            padding: 50px auto 100px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    .support { order: 1; }
+    .about { order: 3; }
+    .account { order: 2; }
+    .social-links { order: 4; }
+}
+
+@media (max-width: @sm) {
+    .footer {        
+        &__body {
+            max-width: 400px;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 auto ;
+            padding: 50px 0px 100px;
+        }
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        } 
+    }
+    .support {
+        order: -1;
+    }    
+}
+
+@media (max-width: 480px) {
+    .footer {        
+        &__body {
+            max-width: 200px;
+            grid-template-columns: 1fr;
+            margin: 0 auto;
+            padding: 50px 0px 100px;
+        }
+        &__item {
+
+        } 
+    }  
+}

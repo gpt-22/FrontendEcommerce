@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- adaptive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- disable forced link for a phone number on iOS -->
+    <meta name="format-detection" content="telephone=no">
+    
+    <title></title>
+    
+   <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.6.3/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.3/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.6.3/dist/js/uikit-icons.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/styles/style.min.css">
+
+</head>
+<body>
+    <div class="container">
+        {% include "templates/common/header.html" %}
+
+        <main class="content">
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        {% include "templates/common/footer.html" %}
+    </div>
+    
+
+    <!-- custom JS -->
+    <script src="static/js/script.js"></script>
+</body>
+</html>

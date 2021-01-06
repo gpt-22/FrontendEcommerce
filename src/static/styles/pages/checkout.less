@@ -1,0 +1,67 @@
+// main: ../style.less
+
+
+.tm-checkout {
+    &__section {
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    &__container {
+    }
+    &__form {
+        // margin-left: 0;
+    }
+    &__sticky-cart {
+        margin: 56px 0 0 0;
+        z-index: 1;
+    }
+
+    &__receive-method-tab a[aria-expanded="true"] {
+        background-color: #1e87f0 !important;
+        color: #fff !important;
+    }
+
+    &__comment-block, &__delivery-date-time {
+        margin-top: 15px;
+    }
+
+    &__payment-choice {
+        height: 40px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 4px;
+    }
+
+    &__pay-btn {
+        // line-height: 38px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .tm-checkout {
+        &__sticky-cart {
+            max-width: 500px;
+            margin: 56px auto 0;
+        }
+        &__pay-btn {
+            padding: 0 15px;
+            line-height: 38px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .tm-checkout {
+        &__fields > div {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+@media (max-width: @xsm) {
+    .tm-checkout {
+        &__email {
+            margin-bottom: 15px;
+        }
+    }
+}

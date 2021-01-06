@@ -1,0 +1,142 @@
+// main: ../style.less
+
+
+.tm-cart-page {
+    // min-height: 100%;
+}
+
+.tm-page-title__cart {}
+
+.tm-product-list {
+    border-top: 1px solid @border;
+    &__item {}
+}
+.tm-product {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid @border;
+
+    &__info-container {
+        display: flex;
+    }
+    &__img-container {
+        overflow: hidden;
+        height: 200px;
+    }
+    &__img {
+        position: relative;
+        object-fit: cover;
+        width: 200px;
+        top: -40px;
+    }
+    &__info {
+        padding: 0 0 0 20px;
+    }
+    &__title {
+        margin: -7px 0 10px;
+    }
+    &__size {}
+    &__color {}
+    &__price {}
+    &__quantity-column {
+        padding: 0 0 0 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+    }
+    &__quantity {
+        margin: 0 10px;
+        padding: 0;
+        width: 36px;
+        height: 36px;
+
+        text-align: center;
+        line-height: 5px;
+
+    }
+}
+.tm-total-price {
+    margin: auto 0;
+}
+.tm-total-price span {
+    font-weight: 500;
+    color: #111;
+}
+.tm-change-qty-btn {}
+.tm-change-qty-btn > svg {
+    width: 100%;
+    height: 100%;
+    padding: 10.5px;
+}
+.tm-delete-btn {}
+.tm-delete-btn > svg {
+    width: 100%;
+    height: 100%;
+    padding: 8px;
+}
+.tm-checkout-btn {}
+
+
+@media (max-width: @xsm) {
+    .tm-page-title__cart {
+        margin: 20px;
+    }
+    .tm-product-list {
+        &__item {}
+    }
+    .tm-product {
+
+        &__info-container {
+            display: flex;
+        }
+        &__img-container {
+            width: 50%;
+        }
+        &__img {}
+     
+        &__info {
+            padding: 0 0 0 10px;
+        }
+        &__title {}
+        &__size {}
+        &__color {}
+        &__price {}
+        &__quantity-column {
+            width: 100%;
+        }
+    }
+    .tm-checkout-btn {
+        line-height: 38px;
+    }
+}
+
+@media (max-width: @phone-sm) {
+    .tm-page-title__cart {
+        margin: 10px;
+    }
+    .tm-product {
+        &__info-container {
+            display: block;
+            height: 100%;
+        }
+        &__img-container {
+            width: 100%;
+            height: 50%;
+        }
+        &__img {
+            width: 100%;
+            height: 100%;
+            top: 0;
+        }
+        &__info {}
+        &__title {}
+        &__size {}
+        &__color {}
+        &__price {}
+    } 
+    .tm-checkout-btn {
+        padding: 0 15px;
+    }
+}
