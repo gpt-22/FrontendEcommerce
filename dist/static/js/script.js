@@ -175,7 +175,6 @@ function doCartLogic() {
 // /CART LOGIC
 
 
-
 // CHECKOUT LOGIC
 function doCheckoutLogic() {
     console.log('checkout');
@@ -187,6 +186,21 @@ function doCheckoutLogic() {
 }
 
 // /CHECKOUT LOGIC
+
+
+// ACCOUTN LOGIC
+function doAccountLogic() {
+    UIkit.tab(document.getElementById('tab')).show(1);
+
+    
+    const accountPhoneInput = document.getElementById('accountPhoneInput');
+    accountPhoneInput.addEventListener('keydown', enforceFormat);
+    accountPhoneInput.addEventListener('keyup', formatToPhone);
+}
+
+// /ACCOUTN LOGIC
+
+
 
 
 // LOGIC EXECUTION
@@ -207,5 +221,8 @@ switch (pageFileName) {
         break;
     case 'checkout.html':
         doCheckoutLogic();
+        break;
+    case 'account.html':
+        doAccountLogic();
         break;
 }

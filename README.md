@@ -6,6 +6,7 @@
 - product
 - cart
 - checkout
+- account
 
 ### Project setup:
 - git clone https://github.com/IncomprehensibleGuy/eCommerceFrontend.git

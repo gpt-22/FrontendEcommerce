@@ -1,0 +1,154 @@
+// main: ../style.less
+
+
+.tm-exit-btn {
+    &__container {}
+}
+
+.tm-save-btn {
+    &__container {   
+        // padding: 0 10px;
+    }
+}
+
+
+.tm-account-page {
+    padding: 30px 0;
+
+    &__container {}
+}
+
+.tm-tabs {
+    max-width: 1000px;
+
+    & > ul:first-child > li > a {
+        font-size: 15px;
+
+    }
+}
+
+.tm-account-edit-form {
+    
+
+    .tm-email-phone-password label {
+        margin-top: 15px;
+    }
+}
+
+
+.tm-order-header, .tm-address-header {
+    font-size: 15px;
+    font-weight: 500;
+
+    & > span {
+        line-height: 15px !important;
+        color: #222 !important;
+    }
+}
+
+.tm-adresses-header {
+    padding: 20px 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+
+    > h5 {
+        margin: 0;
+        line-height: 36px;
+    }
+}
+
+.tm-add-address-form {
+    & label > div {
+        margin-bottom: 5px;
+    }
+
+    & div > div {
+        margin-top: 10px;
+    }
+
+    & .tm-address-title {
+        margin-top: 25px;
+    }
+}
+
+.tm-order, .tm-address {
+    &::before {
+        display: none;
+    }
+    & > span {
+        line-height: 38px;
+        font-size: 15px;
+    }
+    &__details-link {
+        padding: 0 15px;
+    }
+}
+
+.tm-order {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 200px));
+}
+
+.tm-address {
+    display: grid;
+    grid-template-columns: minmax(30px, 200px) minmax(30px, 700px) minmax(30px, 100px);
+
+    &__btns {
+        a {
+            margin-left: 10px;
+        }
+    }
+}
+
+
+
+@media (max-width: @xsm) {  
+    .tm-order-header {
+        display: none;
+    }
+    .tm-order {
+        grid-template-columns: 100px 100px 80px minmax(120px, 200px) 100px;
+    }
+    &__details-link {
+        // padding: 0 5px;
+    }
+
+    .tm-address {
+        grid-template-columns: 1fr 92px;
+
+        &__address {
+            grid-row-start: 2;
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            font-weight: normal;
+        }
+    }
+
+
+}
+
+@media (max-width: 539px) {
+    .tm-order {
+        grid-template-columns: 1fr 1fr;
+        
+        & > span {
+            margin: 10px 0;
+        }
+        & > a {
+            margin: 15px auto 0;
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+    }
+}
+
+@media (max-width: 359px) {
+    .tm-add-address-modal-btns-row {
+        width: 100%;
+
+        button {
+            padding: 0 15px;
+        }
+    }
+}
