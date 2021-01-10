@@ -1,0 +1,59 @@
+// main: ../style.less
+
+
+.tm-order-detail {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 0;
+
+    &__back-btn {
+        & > svg {
+            margin-top: -2px;
+        }
+    }
+
+    &__container {}
+    &__number {}
+    &__grid {}
+    &__info-col {
+        font-size: 16px;
+
+        & > div {
+            margin-bottom: 20px;
+        }
+    }
+    &__receiver {
+        & > div > span {
+            display: block;
+            margin:  0 0 10px 0;
+        }
+    }
+
+    &__products-col {}
+    &__summary {
+        font-size: 17px;
+        font-weight: 500;
+    }
+    &__products-price {
+        color: #111;
+    }
+    &__delivery-price {}
+    &__total-price {
+        color: #111;
+    }
+}
+
+@media (max-width: 439px) {
+    .tm-order-detail {
+        &__info-col {
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 359px) {
+    .tm-order-detail {
+        &__info-col {
+            font-size: 13px;
+        }
+    }
+}

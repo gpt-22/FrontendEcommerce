@@ -189,10 +189,18 @@ function doCheckoutLogic() {
 
 
 // ACCOUTN LOGIC
-function doAccountLogic() {
-    UIkit.tab(document.getElementById('tab')).show(1);
+// function showOrderDetails(event) {
+//     console.log(event.target)
+// }
 
-    
+function doAccountLogic() {
+    // UIkit.tab(document.getElementById('tab')).show(1);
+
+    // let orderDetailBtnsList = document.getElementsByClassName('tm-order__details-link')
+    // for (let btn of orderDetailBtnsList) {
+    //     btn.addEventListener('click', showOrderDetails)
+    // }
+
     const accountPhoneInput = document.getElementById('accountPhoneInput');
     accountPhoneInput.addEventListener('keydown', enforceFormat);
     accountPhoneInput.addEventListener('keyup', formatToPhone);

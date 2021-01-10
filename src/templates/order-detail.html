@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="tm-order-detail uk-margin-large-bottom">
+    <div class="uk-margin-bottom uk-flex uk-flex-between">
+        <a href="account.html" class="uk-button uk-button-default tm-order-detail__back-btn" uk-icon="icon: arrow-left">назад</a>
+        <a href="#" class="uk-button uk-button-default tm-exit-btn">выйти</a>    
+    </div>
+
+    <div class="tm-order-detail__container">
+        <h3 class="tm-order-detail__number">
+            {{ pageTitles.orderDetail }} № 000001-0001 от 01.01.2021 16:39
+        </h3>
+        
+        <div class="uk-grid uk-child-width-1-1 uk-child-width-1-2@m tm-order-detail__grid">
+            <div class="uk-margin-bottom tm-order-detail__info-col">
+                <div class="uk-grid uk-child-width-1-2 tm-order-detail__receiver">
+                    <span>Получатель:</span>
+                    <div>
+                        <span>Тихомиров Григорий</span>
+                        <span>gregoryrulit@gmail.com</span>
+                        <span>+7 918 065 84 26</span>
+                    </div>
+                </div>
+                
+                <div class="tm-order-detail__delivery">
+                    <div class="uk-grid uk-child-width-1-2">
+                        <span>Способ доставки:</span>
+                        <span>Курьером</span>
+                    </div>
+                    <div class="uk-grid uk-child-width-1-2">
+                        <span>Адрес доставки:</span>
+                        <span>г.Москва, ул.Ленина, д.123к4, подъезд 5, этаж 6, кв.789</span>
+                    </div>
+                    <div class="uk-grid uk-child-width-1-2">
+                        <span>Дата и время доставки:</span>
+                        <span>30 января с 09:00 - 12:00</span>
+                    </div> 
+                </div>
+                
+                <div class="uk-grid uk-child-width-1-2 tm-order-detail__payment-method">
+                    <span>Способ оплаты:</span>
+                    <span>Картой онлайн</span>
+                </div>
+            </div>
+            <div class="tm-order-detail__products-col">
+                <ul class="tm-product-list">
+                    <li id="product1" class="tm-product-list__item tm-product">
+                        <div class="tm-product__info-container">
+                            <div class="tm-product__img-container">
+                                <img class="tm-product__img" src="../static/images/кроссовки-air-force_1.jpg" alt="">
+                            </div>
+                            <div class="tm-product__info">
+                                <h3 class="tm-product__title">
+                                    Nike Air Force 1 Mid
+                                </h3>
+                                <span class="tm-product__color">
+                                    Белый 
+                                </span>    
+                                <span class="tm-product__size">
+                                    42 RUS
+                                </span>
+                                <p class="tm-product__price">
+                                    7990 ₽
+                                </p>    
+                            </div>
+                        </div>
+                    </li>
+                    <li id="product1" class="tm-product-list__item tm-product">
+                        <div class="tm-product__info-container">
+                            <div class="tm-product__img-container">
+                                <img class="tm-product__img" src="../static/images/кроссовки-air-force_1.jpg" alt="">
+                            </div>
+                            <div class="tm-product__info">
+                                <h3 class="tm-product__title">
+                                    Nike Air Force 1 Mid
+                                </h3>
+                                <span class="tm-product__color">
+                                    Белый 
+                                </span>    
+                                <span class="tm-product__size">
+                                    42 RUS
+                                </span>
+                                <p class="tm-product__price">
+                                    7990 ₽
+                                </p>    
+                            </div>
+                        </div>
+                    </li>  
+                </ul>
+            
+                <div class="tm-order-detail__summary">
+                    <p class="uk-grid uk-child-width-1-2 tm-order-detail__products-price">
+                        <span>Всего</span> 
+                        <span>15 980 ₽</span>
+                    </p>
+                    <p class="uk-grid uk-child-width-1-2 tm-order-detail__delivery-price">
+                        <span>Стоимость доставки</span>
+                        <span>590 ₽</span>
+                    </p>
+                    <p class="uk-grid uk-child-width-1-2 tm-order-detail__total-price">
+                        <span>Сумма</span>
+                        <span>16 570 ₽</span>
+                    </p>    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

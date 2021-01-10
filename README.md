@@ -1,5 +1,5 @@
 
-### Stack: HTML5, CSS3, JS, UIkit, Gulp
+### Stack: HTML5, LESS, JS, UIkit, Gulp
 
 ### Pages:
 - catalog
@@ -7,6 +7,7 @@
 - cart
 - checkout
 - account
+- order detail
 
 ### Project setup:
 - git clone https://github.com/IncomprehensibleGuy/eCommerceFrontend.git

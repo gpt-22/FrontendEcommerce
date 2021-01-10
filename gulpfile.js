@@ -18,7 +18,6 @@ const
             css: sourceFolder + '/static/styles/style.less',
             js: sourceFolder + '/static/js/**/*.js',
             img: sourceFolder + '/static/images/**/*.{jpg,JPG,png,PNG,svg,SVG,gif,GIF,ico,ICO,webp,WEBP}',
-            fonts: sourceFolder + '/static/fonts/*.ttf',
         },
         watch: {
             html: sourceFolder + '/**/*.html',
@@ -31,7 +30,6 @@ const
             css: projectFolder + '/static/styles/',
             js: projectFolder + '/static/js/',
             img: projectFolder + '/static/images/',
-            fonts: projectFolder + '/static/fonts/',
         },
         clean: './' + projectFolder + '/',
     }
@@ -68,6 +66,7 @@ function watchHTML() {
                 womenShoes: "Женская обувь",
                 cart: "Корзина",
                 checkout: "Оформление заказа",
+                orderDetail: "Заказ",
             }    
         }
     }))
@@ -109,11 +108,6 @@ function watchFiles(params) {
 }
 
 
-function fonts() {
-    return gulp.src(path.src.fonts).pipe(gulp.dest(path.build.fonts));
-}
-
-
 // delete result folder to rewrite
 const del = require('del')
 function clean(params) {
@@ -127,7 +121,7 @@ exports.css = watchCSS
 exports.js = watchJS
 exports.images = watchImages
 
-const build = gulp.series(clean, gulp.parallel(watchHTML, watchCSS, watchJS, watchImages, fonts))
+const build = gulp.series(clean, gulp.parallel(watchHTML, watchCSS, watchJS, watchImages))
 const watch = gulp.parallel(build, watchFiles, runBrowserSync)
 exports.build = build
 exports.watch = watch
